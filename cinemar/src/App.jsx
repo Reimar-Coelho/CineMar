@@ -1,9 +1,13 @@
+import Header from "./Components/Header/Header"
+import {Outlet} from "react-router-dom"
+
 function App() {
 
 
   return (
     <>
-      <h1> App</h1>
+      <Header/>
+      <Outlet/>
     </>
   )
 }
