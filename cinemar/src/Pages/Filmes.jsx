@@ -30,7 +30,7 @@ function Filmes() {
                     <div className="card-filme" key={filme.id}>
                         <img src={`${urlImg}${filme.poster_path}`}/>
                         <h1>{filme.title}</h1>
-                        <Link to={`filmes/:${filme.id}`} className="bg-blue-500">Saber mais</Link>
+                        <Link to={`${filme.id}`} className="bg-blue-500">Saber mais</Link>
                     </div>
                 ))
             }

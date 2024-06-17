@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-raul": "#735ABC"
+        "primary-raul": "#000"
       }
     },
   },
