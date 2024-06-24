@@ -7,11 +7,11 @@ function Filmes() {
 
     const apiKey='api_key=d1bef122d48992b960cc79c7306f5c1b'
     const urlBase = 'https://api.themoviedb.org/3/movie/'
-    const urlImg = 'https://image.tmdb.org/t/p/w342/'
+    const urlImg = 'https://image.tmdb.org/t/p/w780/'
 
     
     useEffect( () => {
-        fetch(`${urlBase}popular?${apiKey}`)
+        fetch(`${urlBase}popular?${apiKey}&language=pt-BR`)
         .then(response => response.json())
         .then(response => setFilmes(response.results))
         .catch(erro => console.log(erro))
@@ -23,14 +23,15 @@ function Filmes() {
     return (
         
         <>
-            <h1>Filmes</h1>
-            <div className="listaFilmes flex flex-row">
+            <h1>FILMES</h1>
+            <div className="listaFilmes grid grid-cols-3 gap-36 mx-48">
             {
                 filmes.map(filme => (
                     <div className="card-filme" key={filme.id}>
-                        <img src={`${urlImg}${filme.poster_path}`}/>
-                        <h1>{filme.title}</h1>
-                        <Link to={`${filme.id}`} className="bg-blue-500">Saber mais</Link>
+                        <Link to={`${filme.id}`}>
+                            <img src={`${urlImg}${filme.poster_path}`} className="min-w-full rounded-xl"/>
+                            <h1>{filme.title}</h1>
+                        </Link>
                     </div>
                 ))
             }
