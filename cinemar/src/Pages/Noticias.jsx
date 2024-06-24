@@ -11,7 +11,7 @@ function Noticias() {
               key={noticia.title}
               className={`absolute ${
                 index % 2 === 0 ? "left-10" : "right-10"
-              } my-4 w-2/4 p-4 border-2 rounded mx-32 font-julius min-h-64 bg-black flex flex-row justify-center`}
+              } my-4 w-3/5 p-4 border-2 rounded mx-32 font-julius min-h-64 bg-black flex flex-row justify-center`}
               style={{ top: `${index * 40 + 3}%` }}
             >
               <div>
