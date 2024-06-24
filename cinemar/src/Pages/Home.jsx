@@ -20,7 +20,7 @@ function Home() {
 
     return (
         <>
-            <h1>FILMES EM CARTAZ</h1>
+            <h1 className="my-10 mx-48 font-julius">FILMES EM CARTAZ</h1>
             <div className="listaFilmes grid grid-cols-3 gap-36 mx-48">
             {
                 filmes.map(filme => (
@@ -28,7 +28,7 @@ function Home() {
                         
                         <Link to={`${filme.id}`}>
                             <img src={`${urlImg}${filme.poster_path}`} className="min-w-full rounded-xl"/>
-                            <h1>{filme.title}</h1>
+                            <h1 className="font-julius border-2 rounded mt-3 p-2">{filme.title}</h1>
                         </Link>
                     </div>
                 ))

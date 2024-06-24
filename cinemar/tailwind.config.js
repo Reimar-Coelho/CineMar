@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'julius': ["Julius Sans One"]
+    },
     extend: {
       colors: {
         "primary-raul": "#000"

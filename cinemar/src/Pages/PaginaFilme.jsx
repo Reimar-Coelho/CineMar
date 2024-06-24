@@ -20,11 +20,11 @@ function PaginaFilme(){
     },[])
 
     return(
-        <>
+        <main className="bg-black">
             <img src= {`${urlImg}${filme.backdrop_path}`} alt="" />
-            <h1>{filme.title}</h1>
-            <p>{filme.overview}</p>
-        </>
+            <h1 className="text-center font-extrabold text-xl font-julius">{filme.title}</h1>
+            <p className="font-julius text-center">{filme.overview}</p>
+        </main>
         
 
     )
